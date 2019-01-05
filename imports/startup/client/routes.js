@@ -2,7 +2,6 @@ import { FlowRouter } from 'meteor/kadira:flow-router'
 import { BlazeLayout } from 'meteor/kadira:blaze-layout'
 import { Roles } from 'meteor/alanning:roles'
 import { Log } from 'meteor/mozfet:meteor-logs'
-import '/imports/ui/layouts/main/mainLayout.js'
 Log.log(['debug', 'load'], `Loading module ${module.id}.`)
 
 // initialise roles and flowrouter
@@ -22,14 +21,25 @@ Template.registerHelper('pathFor', function() {
 FlowRouter.route('/', {
   name: 'home',
   action: async function(params, queryParams) {
+    await import('/imports/ui/layouts/main/mainLayout.js')
     await import('/imports/ui/pages/home/homePage.js')
     BlazeLayout.render('mainLayout', { main: 'homePage' })
   }
 })
 
-FlowRouter.route('/terms', {
-  name: 'legal',
+FlowRouter.route('/autoform/basic', {
+  name: 'autoformBasic',
   action: async function(params, queryParams) {
+    await import('/imports/ui/layouts/basic/basicLayout.js')
+    await import('/imports/ui/pages/autoformBasic/autoformBasicPage.js')
+    BlazeLayout.render('basicLayout', { main: 'autoformBasicPage' })
+  }
+})
+
+FlowRouter.route('/terms', {
+  name: 'terms',
+  action: async function(params, queryParams) {
+    await import('/imports/ui/layouts/main/mainLayout.js')
     await import('/imports/ui/pages/terms/termsPage.js')
     BlazeLayout.render('mainLayout', { main: 'termsPage' })
   }
@@ -38,6 +48,7 @@ FlowRouter.route('/terms', {
 FlowRouter.route('/contact', {
   name: 'contact',
   action: async function(params, queryParams) {
+    await import('/imports/ui/layouts/main/mainLayout.js')
     await import('/imports/ui/pages/contact/contactPage.js')
     BlazeLayout.render('mainLayout', { main: 'contactPage' })
   }
@@ -47,6 +58,7 @@ FlowRouter.route('/secure', {
   name: 'secure',
   triggersEnter: [AccountsTemplates.ensureSignedIn],
   action: async function(params, queryParams) {
+    await import('/imports/ui/layouts/main/mainLayout.js')
     await import('/imports/ui/pages/secure/securePage.js')
     BlazeLayout.render('mainLayout', { main: 'securePage' })
   }
@@ -56,6 +68,7 @@ FlowRouter.route('/settings', {
   name: 'settings',
   triggersEnter: [AccountsTemplates.ensureSignedIn],
   action: async function(params, queryParams) {
+    await import('/imports/ui/layouts/main/mainLayout.js')
     await import('/imports/ui/pages/setting/settingsPage.js')
     BlazeLayout.render('mainLayout', { main: 'settingsPage' })
   }
@@ -63,6 +76,7 @@ FlowRouter.route('/settings', {
 
 FlowRouter.notFound = {
   action: async function(params, queryParams) {
+    await import('/imports/ui/layouts/main/mainLayout.js')
     await import('/imports/ui/pages/notFound/notFoundPage')
     BlazeLayout.render('mainLayout', { main: 'notFoundPage' })
   }

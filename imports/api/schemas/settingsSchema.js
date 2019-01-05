@@ -3,6 +3,9 @@ import SimpleSchema from 'simpl-schema'
 import 'meteor/aldeed:collection2-core'
 import { Tracker } from 'meteor/tracker'
 
+// extend simple schema with autoform options
+SimpleSchema.extendOptions(['autoform'])
+
 // export schema
 export const schema = new SimpleSchema({
 
