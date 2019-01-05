@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff2), format('woff2');
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+@import "../node_modules/materialize-css/sass/materialize.scss";
+@import "{mozfet:autoform-materialize}/style.scss";
+
+.header {
+  color: $primary-color;
+}
+
+.disable-selection{
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select:none;
+}
+
+// fix the zoom issue on ios
+// https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone/6394497#6394497
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select:focus,
+  textarea {
+    font-size: 16px;
+  }
+}

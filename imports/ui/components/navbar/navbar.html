@@ -1,0 +1,123 @@
+<template name="navbar">
+  <template name="navbar">
+
+    <!-- Horizonal Navigation bar -->
+    <nav class="nav-fixed">
+      <div class="nav-wrapper container">
+
+        <!-- menu button -->
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <!-- app title as logo -->
+        <div>
+          <a href="/" id="logo-container" class="brand-logo"
+              style="font-size: 1.5em">
+            Fullstack
+          </a>
+        </div>
+
+        <!-- right navbar for large views -->
+        <ul id="nav-right" class="right hide-on-med-and-down">
+          {{>navbarItemHome activePage=activePage}}
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="profile-dropdown">
+              <i class="material-icons left">menu</i>
+              {{translate "navbar-more"}}
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- profile dropdown for horizontal dropdown -->
+    <ul id="profile-dropdown" class="dropdown-content">
+      <!-- <li>
+        <a href="/legal">
+          <i class="material-icons left">library_books</i>
+          <div class="truncate">{{translate "navbar-legal"}}</div>
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <i class="material-icons left">call</i>
+          <div class="truncate">{{translate "navbar-contact"}}</div>
+        </a>
+      </li> -->
+
+      {{#if currentUser}}
+        <li class="waves-effect">
+          <a href="{{pathFor 'account'}}">
+            <div class="valign-wrapper">
+              <i class="material-icons left">person</i>
+              <div class="truncate">{{translate "navbar-account"}}</div>
+            </div>
+          </a>
+        </li>
+      {{/if}}
+
+      <li class="waves-effect">
+        <div class="divider"></div>
+        {{> atNavButton}}
+      </li>
+    </ul>
+
+    <!-- sliding sidebar navigation -->
+    <ul id="slide-out" class="sidenav">
+      {{> navbarItemHome activePage=activePage}}
+
+      <li><div class="divider"></div></li>
+      <li>
+        <a class="subheader">{{translate "navbar-profile"}}</a>
+      </li>
+      <!-- <li>
+        <a href="/legal">
+          <div class="valign-wrapper">
+            <i class="material-icons left">library_books</i>
+            {{translate "navbar-legal"}}
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <div class="valign-wrapper">
+            <i class="material-icons left">call</i>
+            {{translate "navbar-contact"}}
+          </div>
+        </a>
+      </li> -->
+      {{#if currentUser}}
+        <li>
+          <a href="{{pathFor 'settings'}}">
+            <div class="valign-wrapper">
+              <i class="material-icons left">settings</i>
+              <div class="truncate">Settings</div>
+            </div>
+          </a>
+        </li>
+      {{/if}}
+      <li>
+        {{> atNavButton}}
+      </li>
+    </ul>
+  </template>
+
+  <template name="navbarItem">
+    <li class="{{active}} navbarItemSelector">
+      {{> UI.contentBlock}}
+    </li>
+  </template>
+
+  <template name="navbarItemHome">
+    {{#navbarItem pageName="home" activePage=activePage}}
+      <a href="/home">
+        <div class="valign-wrapper">
+          <i class="material-icons">cloud</i>&nbsp;&nbsp;&nbsp;&nbsp;{{translate "navbar-home"}}
+        </div>
+      </a>
+    {{/navbarItem}}
+  </template>
+
+</template>

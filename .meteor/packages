@@ -1,0 +1,44 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-base@1.4.0                     # Shared foundation for all Meteor packages
+standard-minifier-css@1.5.2           # CSS minifier run for production mode
+standard-minifier-js@2.4.0            # JS minifier run for production mode
+es5-shim@4.8.0                        # ECMAScript 5 compatibility for older browsers
+ecmascript@0.12.0              		    # Enable ECMAScript2015+ syntax in app code
+
+mongo@1.6.0														# The most popular no-sql object orientated database
+allow-deny@1.1.0                      # Allow or deny client access to documents
+email@1.2.3                           # For sending email
+mobile-experience@1.0.5       				# Packages for a great mobile UX
+tracker@1.2.0                 				# Meteor's client-side reactive programming library
+dynamic-import@0.5.0                  # Conditional lazy importing
+blaze-html-templates@1.1.2            # Compile .html files into Meteor Blaze views
+
+fourseven:scss@4.5.4                  # SASS for stylesheets
+
+kadira:blaze-layout     							# Layout manager for blaze (works well with FlowRouter)
+
+matb33:collection-hooks						    # MongoDB collection hooks
+kadira:flow-router      							# FlowRouter is a client router for Meteor
+accounts-password@1.5.0								# Accounts are used to keep customer data save
+useraccounts:flow-routing             # Flow routing for private areas
+alanning:roles                        # Used for securing admin functions
+
+zodiase:material-design-icons-fonts		# Materialize icons to avoid loading in apps
+mozfet:materialize-icons              # Reactive materialize icons with tooltips
+useraccounts:materialize              # Materialize styled user accounts.. can be better...
+
+aldeed:autoform
+aldeed:collection2-core 							# Attach schemas to collections for automatic validation
+aldeed:template-extension
+
+mozfet:meteor-logs@0.3.3
+mozfet:access@0.0.9
+mozfet:dynaview@0.0.5
+mozfet:materialize-toast@0.0.4
+mozfet:autoform-materialize@5.0.1
+mozfet:autoform-materialize-modals@4.0.3

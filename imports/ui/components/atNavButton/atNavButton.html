@@ -1,0 +1,11 @@
+<template name="customAtNavButton">
+  <a href="{{pathFor 'home'}}" id="at-nav-button">
+    <div class="valign-wrapper">
+    	{{#if signedIn}}
+        <i class="material-icons left">lock_outline</i>
+      {{else}}
+        <i class="material-icons left">lock_open</i>
+      {{/if}}{{text}}
+    </div>
+  </a>
+</template>
