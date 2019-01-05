@@ -4,17 +4,17 @@ import { Template } from 'meteor/templating'
 import './notFoundPage.html'
 
 // on created
-Template.fullstackNotFoundPage.onCreated(() => {
+Template.notFoundPage.onCreated(() => {
   const instance = Template.instance()
 })
 
 // on rendered
-Template.fullstackNotFoundPage.onRendered(() => {
+Template.notFoundPage.onRendered(() => {
   const instance = Template.instance()
 })
 
 // helpers
-Template.fullstackNotFoundPage.helpers({
+Template.notFoundPage.helpers({
   helper() {
     const instance = Template.instance()
     return 'help'
@@ -22,7 +22,7 @@ Template.fullstackNotFoundPage.helpers({
 })
 
 // events
-Template.fullstackNotFoundPage.events({
+Template.notFoundPage.events({
 
   //on click class
   'click .className'(event, instance) {
@@ -30,6 +30,6 @@ Template.fullstackNotFoundPage.events({
 })
 
 // on destroyed
-Template.fullstackNotFoundPage.onDestroyed(() => {
+Template.notFoundPage.onDestroyed(() => {
   const instance = Template.instance()
 })

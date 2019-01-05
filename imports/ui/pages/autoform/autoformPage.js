@@ -4,17 +4,17 @@ import { Template } from 'meteor/templating'
 import './autoformPage.html'
 
 // on created
-Template.fullstackAutoformPage.onCreated(() => {
+Template.autoformPage.onCreated(() => {
   const instance = Template.instance()
 })
 
 // on rendered
-Template.fullstackAutoformPage.onRendered(() => {
+Template.autoformPage.onRendered(() => {
   const instance = Template.instance()
 })
 
 // helpers
-Template.fullstackAutoformPage.helpers({
+Template.autoformPage.helpers({
   helper() {
     const instance = Template.instance()
     return 'help'
@@ -22,7 +22,7 @@ Template.fullstackAutoformPage.helpers({
 })
 
 // events
-Template.fullstackAutoformPage.events({
+Template.autoformPage.events({
 
   //on click class
   'click .className'(event, instance) {
@@ -30,6 +30,6 @@ Template.fullstackAutoformPage.events({
 })
 
 // on destroyed
-Template.fullstackAutoformPage.onDestroyed(() => {
+Template.autoformPage.onDestroyed(() => {
   const instance = Template.instance()
 })

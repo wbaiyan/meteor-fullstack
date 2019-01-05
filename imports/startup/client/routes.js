@@ -23,50 +23,50 @@ FlowRouter.route('/', {
   name: 'home',
   action: async function(params, queryParams) {
     await import('/imports/ui/pages/home/homePage.js')
-    BlazeLayout.render('fullstackMainLayout', { main: 'fullstackHomePage' })
+    BlazeLayout.render('mainLayout', { main: 'homePage' })
   }
 })
 
-// FlowRouter.route('/legal', {
-//   name: 'legal',
-//   action: async function(params, queryParams) {
-//     await import('/imports/ui/pages/legal/legalPage.js')
-//     BlazeLayout.render('appBody', { main: 'fullstackLegalPage' })
-//   }
-// })
-//
-// FlowRouter.route('/contact', {
-//   name: 'contact',
-//   action: async function(params, queryParams) {
-//     await import('/imports/ui/pages/contact/contactPage.js')
-//     BlazeLayout.render('appBody', { main: 'fullstackContactPage' })
-//   }
-// })
-//
-// FlowRouter.route('/secure/:slug', {
-//   name: 'secure',
-//   triggersEnter: [AccountsTemplates.ensureSignedIn],
-//   action: async function(params, queryParams) {
-//     await import('/imports/ui/pages/secure/securePage.js')
-//     BlazeLayout.render('appBody', { main: 'updateEventPage' })
-//   }
-// })
-//
-// FlowRouter.route('/settings', {
-//   name: 'settings',
-//   triggersEnter: [AccountsTemplates.ensureSignedIn],
-//   action: async function(params, queryParams) {
-//     await import('/imports/ui/pages/setting/settingsPage.js')
-//     BlazeLayout.render('appBody', { main: 'fullstackSettingsPage' })
-//   }
-// })
-//
-// FlowRouter.notFound = {
-//   action: async function(params, queryParams) {
-//     await import('/imports/ui/pages/notFound/notFoundPage')
-//     BlazeLayout.render('appBody', { main: 'fullstackNotFoundPage' })
-//   }
-// }
+FlowRouter.route('/terms', {
+  name: 'legal',
+  action: async function(params, queryParams) {
+    await import('/imports/ui/pages/terms/termsPage.js')
+    BlazeLayout.render('mainLayout', { main: 'termsPage' })
+  }
+})
+
+FlowRouter.route('/contact', {
+  name: 'contact',
+  action: async function(params, queryParams) {
+    await import('/imports/ui/pages/contact/contactPage.js')
+    BlazeLayout.render('mainLayout', { main: 'contactPage' })
+  }
+})
+
+FlowRouter.route('/secure', {
+  name: 'secure',
+  triggersEnter: [AccountsTemplates.ensureSignedIn],
+  action: async function(params, queryParams) {
+    await import('/imports/ui/pages/secure/securePage.js')
+    BlazeLayout.render('mainLayout', { main: 'securePage' })
+  }
+})
+
+FlowRouter.route('/settings', {
+  name: 'settings',
+  triggersEnter: [AccountsTemplates.ensureSignedIn],
+  action: async function(params, queryParams) {
+    await import('/imports/ui/pages/setting/settingsPage.js')
+    BlazeLayout.render('mainLayout', { main: 'settingsPage' })
+  }
+})
+
+FlowRouter.notFound = {
+  action: async function(params, queryParams) {
+    await import('/imports/ui/pages/notFound/notFoundPage')
+    BlazeLayout.render('mainLayout', { main: 'notFoundPage' })
+  }
+}
 
 AccountsTemplates.configureRoute('changePwd')
 AccountsTemplates.configureRoute('forgotPwd')

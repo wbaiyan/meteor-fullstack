@@ -21,10 +21,12 @@ Template.navbar.onRendered(() => {
   const instance = Template.instance()
 
   // init navbar
-  $("#menu-button").sidenav()
+  $(".sidenav").sidenav()
 
-  // init dropdown button in navbar
-  $(".dropdown-trigger").dropdown()
+  // init dropdown button
+  const dropdownElement = $(".dropdown-trigger").get(0)
+  instance.state.dropdownInstance = M.Dropdown.init(dropdownElement,
+      {constrainWidth: false})
 
   instance.autorun(() => {
     FlowRouter.watchPathChange()
@@ -40,6 +42,11 @@ Template.navbar.helpers({
     const instance = Template.instance()
 		return instance.state.activePage
 	}
+})
+
+Template.navbar.onDestroyed(() => {
+  const instance = Template.instance()
+  instance.state.dropdownInstance.destroy()
 })
 
 // navbar item helpers

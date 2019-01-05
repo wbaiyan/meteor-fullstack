@@ -5,17 +5,17 @@ import './homePage.html'
 Log.log(['debug', 'load'], `Loading module ${module.id}.`)
 
 // on created
-Template.fullstackHomePage.onCreated(() => {
+Template.homePage.onCreated(() => {
   const instance = Template.instance()
 })
 
 // on rendered
-Template.fullstackHomePage.onRendered(() => {
+Template.homePage.onRendered(() => {
   const instance = Template.instance()
 })
 
 // helpers
-Template.fullstackHomePage.helpers({
+Template.homePage.helpers({
   helper() {
     const instance = Template.instance()
     return 'help'
@@ -23,7 +23,7 @@ Template.fullstackHomePage.helpers({
 })
 
 // events
-Template.fullstackHomePage.events({
+Template.homePage.events({
 
   //on click class
   'click .className'(event, instance) {
@@ -31,6 +31,6 @@ Template.fullstackHomePage.events({
 })
 
 // on destroyed
-Template.fullstackHomePage.onDestroyed(() => {
+Template.homePage.onDestroyed(() => {
   const instance = Template.instance()
 })

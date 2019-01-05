@@ -1,20 +1,20 @@
 // imports
 import { Meteor } from 'meteor/meteor'
 import { Template } from 'meteor/templating'
-import './securePage.html'
+import './settingsPage.html'
 
 // on created
-Template.securePage.onCreated(() => {
+Template.settingsPage.onCreated(() => {
   const instance = Template.instance()
 })
 
 // on rendered
-Template.securePage.onRendered(() => {
+Template.settingsPage.onRendered(() => {
   const instance = Template.instance()
 })
 
 // helpers
-Template.securePage.helpers({
+Template.settingsPage.helpers({
   helper() {
     const instance = Template.instance()
     return 'help'
@@ -22,7 +22,7 @@ Template.securePage.helpers({
 })
 
 // events
-Template.securePage.events({
+Template.settingsPage.events({
 
   //on click class
   'click .className'(event, instance) {
@@ -30,6 +30,6 @@ Template.securePage.events({
 })
 
 // on destroyed
-Template.securePage.onDestroyed(() => {
+Template.settingsPage.onDestroyed(() => {
   const instance = Template.instance()
 })

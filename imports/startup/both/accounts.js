@@ -1,5 +1,5 @@
 AccountsTemplates.configure({
-  defaultLayout: 'appBody',
+  defaultLayout: 'mainLayout',
   // defaultLayoutRegions: {
   //   nav: 'nav',
   //   footer: 'footer',
