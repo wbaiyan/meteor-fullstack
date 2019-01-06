@@ -1,6 +1,8 @@
 {
   "name": "meteor-fullstack",
   "private": true,
+  "version": "0.0.2",
+  "homepage": "https://github.com/mozfet/meteor-fullstack",
   "scripts": {
     "start": "meteor --settings settings-development.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
