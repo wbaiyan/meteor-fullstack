@@ -9,7 +9,13 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-@import "../node_modules/materialize-css/sass/materialize.scss";
+// use custom wrapping for materializecss with custom color schemes
+@import "../imports/ui/components/material/materialize.scss";
+
+// use standard materializecss with ugly pink color scheme
+// @import "../node_modules/materialize-css/sass/materialize.scss";
+
+// add styles for autoform materialize
 @import "{mozfet:autoform-materialize}/style.scss";
 
 .header {
