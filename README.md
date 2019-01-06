@@ -2,14 +2,26 @@
 
 Setting up a new meteor project with your favorite packages and latest dependancies takes time. Not anymore!
 
-This repository contains an Meteor template application complete with my favorite full stack:
-
+This repository contains an Meteor template application complete with my preferred full stack of packages:
+- meteor-base
+- standard-minifier-css
+- standard-minifier-js
+- es5-shim
+- ecmascript
+- mongo
+- allow-deny
+- email
+- mobile-experience
+- tracker
+- dynamic-import
+- blaze-html-templates
 - kadira:flow-router
 - kadira:blaze-layout
 - Meteor Accounts
 - accounts-password
 - useraccounts:flow-routing
 - alanning:roles
+- zodiase:material-design-icons-fonts
 - matb33:collection-hooks
 - fourseven:scss
 - MaterializeCSS
@@ -17,14 +29,24 @@ This repository contains an Meteor template application complete with my favorit
 - SimpleSchema
 - aldeed:autoform
 - aldeed:collections2
+- aldeed:template-extension
 - mozfet:meteor-logging
 - mozfet:access
 - mozfet:materialize-icons
-- customizable MaterializeCSS color scheme
-- settings-development.js
-- cross platform scripts for local host start and Galaxy deploy
-- cross platform scripts for securing production settings and certificates inside repo with GPG2
-- mainLayout including fixed Navigation Bar (footer coming soon)
+- mozfet:meteor-logs
+- mozfet:dynaview
+- mozfet:materialize-toast
+- mozfet:autoform-materialize
+- mozfet:autoform-materialize-modals
+
+Special features built in and ready to go:
+- Customizable MaterializeCSS color scheme
+- Meteor settings: settings-development.js and encrypted settings-production.js inside the repository
+- Dynamic importing of view dependancies per client route
+- Ready for encrypted app store certificates in repository
+- Cross platform scripts for local host start and Galaxy deploy
+- Cross platform scripts for securing production settings and certificates inside repo with GPG2
+- Blaze layout including fixed Navigation Bar (footer coming soon)
 - Internationalization coming soon...
 
 ## Installation
