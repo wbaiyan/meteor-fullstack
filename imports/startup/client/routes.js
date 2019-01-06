@@ -27,15 +27,6 @@ FlowRouter.route('/', {
   }
 })
 
-FlowRouter.route('/autoform/basic', {
-  name: 'autoformBasic',
-  action: async function(params, queryParams) {
-    await import('/imports/ui/layouts/basic/basicLayout.js')
-    await import('/imports/ui/pages/autoformBasic/autoformBasicPage.js')
-    BlazeLayout.render('basicLayout', { main: 'autoformBasicPage' })
-  }
-})
-
 FlowRouter.route('/terms', {
   name: 'terms',
   action: async function(params, queryParams) {

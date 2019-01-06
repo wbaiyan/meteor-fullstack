@@ -9,12 +9,12 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-// @import "../node_modules/materialize-css/sass/materialize.scss";
-// @import "{mozfet:autoform-materialize}/style.scss";
+@import "../node_modules/materialize-css/sass/materialize.scss";
+@import "{mozfet:autoform-materialize}/style.scss";
 
-// .header {
-//   color: $primary-color;
-// }
+.header {
+  color: $primary-color;
+}
 
 .disable-selection{
     -moz-user-select:none;
