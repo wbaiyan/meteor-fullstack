@@ -1,21 +1,25 @@
+//------------------------------------------------------------------------------
+// Customise this section for your project
+//------------------------------------------------------------------------------
+// define project name
+var project_name = 'meteor-fullstack';
+
+// defined server address
+var server_address = 'https://www.meteor-fullstack.com';
+
+// define projects folder that contains this project and will contain the build folder
+var dir_projects = '~/projects';
+//------------------------------------------------------------------------------
+
+// imports
 var shell = require('shelljs');
 var child_process = require('child_process');
 var chalk = require('chalk');
-
 shell.config.fatal = true;
 
-// define project name
-var project_name = 'butterfly-diary';
-
-// defined server address
-var server_address = 'https://www.butterfly-diary.com';
-
 // define keystore and alias for google upload key
-var keystore_name = 'butterfly.keystore';
+var keystore_name = 'keystore';
 var keystore_alias_goolge_upload = 'googlePlayUpload';
-
-// define project folder
-var dir_projects = '~/projects';
 
 // derive directories
 var dir_project = dir_projects + '/' + project_name;
@@ -88,7 +92,7 @@ console.log(chalk.yellow('renamed ' + file_apk_unsigned + ' to ' +
     file_apk_signed));
 
 // optimise the apk for android platform
-var optimiseCmd = '$ANDROID_HOME/build-tools/25.0.0/zipalign 4 ' +
+var optimiseCmd = '$ANDROID_HOME/build-tools/28.0.3/zipalign 4 ' +
     file_apk_signed + ' ' + file_apk_optimised;
 console.log(chalk.yellow('optimiseCmd: ' + optimiseCmd));
 shell.exec(optimiseCmd);

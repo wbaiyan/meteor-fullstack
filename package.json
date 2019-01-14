@@ -1,12 +1,20 @@
 {
   "name": "meteor-fullstack",
-  "private": true,
+  "private": false,
   "version": "0.0.3",
+  "repository": "https://github.com/mozfet/meteor-fullstack",
+  "licence": "See LICENCE.md",
   "homepage": "https://github.com/mozfet/meteor-fullstack",
   "scripts": {
     "start": "meteor --settings settings-development.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "deploy": "DEPLOY_HOSTNAME=eu-west-1.galaxy.meteor.com meteor deploy www.meteor-fullstack.com --settings secure/settings-production.json",
+    "build": "node imports/scripts/build.js",
+    "secure": "node imports/scripts/secure.js",
+    "unsecure": "node imports/scripts/unsecure.js",
+
+    "ios": "meteor run ios-device --settings settings-development.json",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
