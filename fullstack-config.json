@@ -1,0 +1,36 @@
+{
+  "humanName": "Meteor Fullstack",
+  "humanDescription": "Meteor template application that includes all the boilerplate and setup ready to use and scripts to make it easy to customise and get it production ready in minutes.",
+  "projectsFolder": "~/projects",
+  "projectName": "meteor-fullstack",
+  "projectFolder": "~/projects/meteor-fullstack",
+  "version": "0.0.3",
+  "author": "The Expert Box B.V.",
+  "email": "info@expertbox.com",
+  "licence": "MIT",
+  "urlWebsite": "https://expertbox.com",
+  "galaxy": {
+    "hosts": {
+      "prod": "fullstack.eu.meteorapp.com",
+      "stage": "fullstackStage.eu.meteorapp.com"
+    }
+  },
+  "icons": {
+    "backgroundColor": "white",
+    "font": "~/projects/meteor-fullstack/public/fonts/roboto/Roboto-Bold.woff",
+    "textStrokeColor": "black",
+    "textStrokeWidth": "1",
+    "textFillColor": "black"
+  },
+  "mobileApp": {
+    "backgroundColor": "0xffffffff",
+    "iOS": {
+      "appId": "com.expertbox.fullstack"
+    }
+  },
+  "java": {
+  },
+  "androidStudio": {
+    "buildToolsVersion": "28.0.3"
+  }
+}
