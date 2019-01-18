@@ -25,7 +25,7 @@ Special features built in and ready to rock:
 - Cross platform development scripts for securing production settings and certificates inside repo with GPG2
 - Blaze MaterializeCSS layout including fixed Navigation Bar (footer coming soon)
 - Mobile configuration for iOS and Android applications
-- Splash Screens, Icons, and Screenshot examples for iOS and Android for submission to App Stores
+- Automatically generated Splash Screens and Icons, for iOS and Android for submission to App Stores.
 - - [ ] Internationalization (coming soon)
 
 This repository contains an Meteor template application with a powerful stack of packages, configured and ready to rock and roll:
@@ -96,20 +96,21 @@ If you are using the secure and unsecure scripts, you first have to install GPG2
 - [ ] Complete all scripts to make this workflow possible.
 
 1. Edit ```fullstack-config.json```.
-2. Place ```icon.svg``` in ```resources``` folder.
-3. Configure project ```$ meteor npm run config``` based on ```fullstack-config.json```.
-4. Change code to perform business logic.
-5. Bump version ```$ meteor npm run bump <type>``` where <type> is ```patch```/```minor```/```major```.
-6. Start Web in DEV environment  ```$ meteor npm run startWebDev```.
-7. Start iOS in DEV environment ```$ meteor npm run startIosDev```.
-8. Start Android in DEV environment ```$ meteor npm run startAndroidDev```.
-9. Build for STAGE environment ```$ meteor npm run buildStage```.
-11. Deploy to STAGE environment ```$ meteor npm run deployStage```.
-12. Start Web in STAGE environment ``` ```.
-13. Start iOS in STAGE environment ``` ```.
-14. Start Android in STAGE environment ``` ```.
-15. Build for PROD environment ```$ meteor npm run buildProd```.
-16. If hot push only, goto 21.
+2. Configure project ```$ meteor npm run config``` based on ```fullstack-config.json```.
+3. Change code to perform business logic.
+4. Bump version ```$ meteor npm run bump <type>``` where <type> is ```patch```/```minor```/```major```.
+5. Start Web in DEV environment  ```$ meteor npm run startWebDev```.
+6. Start iOS in DEV environment ```$ meteor npm run startIosDev```.
+7. Start Android in DEV environment ```$ meteor npm run startAndroidDev```.
+8. Build for STAGE environment ```$ meteor npm run buildStage```.
+9. Deploy to STAGE environment ```$ meteor npm run deployStage```.
+10. Start Web in STAGE environment ``` ```.
+11. Start iOS in STAGE environment ``` ```.
+12. Start Android in STAGE environment ``` ```.
+13. Build for PROD environment ```$ meteor npm run buildProd```.
+14. Optionally place base icon in ```resources``` folder.
+15. Generate icons ```$ meteor npm run icons```.
+16. If hot push only, goto 20.
 17. Publish Mobile Apps to App Store and Play Store.
 18. Wait for apps to be approved, Deploy to Galaxy.
 19. Release apps on App Store and Play Store.
@@ -135,10 +136,10 @@ $ meteor npm run unsecure
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### Graphical Resources
+## Graphical Resources
 If you are publishing this app on the Web, iOS App Store or Android Play, you will need a gazillion icons and splash screens of your logo. Either hire a full time graphic designer, or install ImageMagick, supply one ```logo.svg``` as base, and run our script to generate it for you in a few seconds for free :)
 
-#### Install ImageMagick
+### Install ImageMagick
 ```
 $ brew install imagemagick
 $ brew install ghostscript
@@ -146,11 +147,44 @@ $ nano ~.bash_profile
 export MAGICK_HOME=/Users/<USERNAME>/Library/Android/sdk
 ```
 
-#### Original Artwork
-Replace ```logo.svg``` in the ```<PROJECT>/resources``` folder with the logo for your app. If you do not have a logo and just want something fast, [logomakr.com](https://logomakr.com/) looks like it could do a decent job of generating an free low rezolution icon logo without text, but for the best quality consider a paid version of https://logojoy.com, or just design something yourself using gimpshop or Adobe Illustratior.
+### Original Artwork
+Optionally place your 2048x2048 base icon/logo ```icon.svg``` or ```icon.png``` in the ```<PROJECT>/resources``` folder.
 
-#### Favicon
-Automatically generating a tiny image based on a high res image is difficult without it being fuzzy, usually image resizing is just not good enough. You could consider using [pixilart.com](https://www.pixilart.com) to manually designing a crisp favicon based on your icon.
+You or your graphic designer can design a logo using Gimpshop or Adobe Illustrator, or you can use freemium online services such as:
+* [logomakr.com](https://logomakr.com/)
+* [logojoy](https://logojoy.com)
+
+### Auto Generated Base Icon
+
+If you do not provide a base icon, a simple text based logo will be auto generated from your human project name for you.
+
+Customization options in ```fullstack-config.json```:
+```
+{
+  "humanName": "Meteor Fullstack",
+  "icons": {
+    "backgroundColor": "white",
+    "font": "~/projects/meteor-fullstack/public/fonts/roboto/Roboto-Bold.woff",
+    "textStrokeColor": "black",
+    "textStrokeWidth": "1",
+    "textFillColor": "black"
+  }
+}
+```
+The icons object is completely optional. The font can be a path or the name of an installed font, e.g. ```TimesNewRoman```, the default used being ```Roboto-Bold```, which is included in this repository. To see which fonts ImageMagick finds on your machine, use:
+```
+$ convert -list font
+```
+
+### Generate Icons
+
+After installing ImageMagick and GhostScript and providing your own icon, or configuring your auto generated icon or even if you did nothing at all. Just run this script, and watch the magic happen:
+```
+$ meteor npm run icons
+```
+
+### Tiny Icons
+Resizing large images to tiny images is difficult without it being fuzzy, usually image resizing is just not good enough. You could consider using [pixilart.com](https://www.pixilart.com) to manually design a crisp favicon based on your base icon.
 
 Interresting read:
 https://www.raywenderlich.com/1716-how-to-change-your-app-icon-at-build-time
