@@ -1,2 +1,6 @@
 {
+  "public": {
+    "isProduction": false,
+    "muteDebugLogging": false
+  }
 }

@@ -1,6 +1,7 @@
 {
   "humanName": "Meteor Fullstack",
   "humanDescription": "Meteor template application that includes all the boilerplate and setup ready to use and scripts to make it easy to customise and get it production ready in minutes.",
+  "shortName": "MFS",
   "projectsFolder": "~/projects",
   "projectName": "meteor-fullstack",
   "projectFolder": "~/projects/meteor-fullstack",
@@ -15,8 +16,15 @@
       "stage": "fullstackStage.eu.meteorapp.com"
     }
   },
+  "mongodb": {
+    "hosts": {
+      "prod": "",
+      "stage": ""
+    }
+  },
   "icons": {
     "backgroundColor": "white",
+    "foregroundColor": "black",
     "font": "~/projects/meteor-fullstack/public/fonts/roboto/Roboto-Bold.woff",
     "textStrokeColor": "black",
     "textStrokeWidth": "1",

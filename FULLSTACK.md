@@ -25,7 +25,7 @@ Special features built in and ready to rock:
 - Cross platform development scripts for securing production settings and certificates inside repo with GPG2
 - Blaze MaterializeCSS layout including fixed Navigation Bar (footer coming soon)
 - Mobile configuration for iOS and Android applications
-- Automatically generated Splash Screens and Icons, for iOS and Android for submission to App Stores.
+- Automatically generated Splash Screens, Icons and Favicons, for iOS and Android for submission to App Stores, Bookmarks, Toolbars and Search Bars.
 - - [ ] Internationalization (coming soon)
 
 This repository contains an Meteor template application with a powerful stack of packages, configured and ready to rock and roll:
@@ -259,7 +259,7 @@ $ nano .bash_profile
 export ANDROID_HOME=/Users/<USERNAME>/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH/:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 $ source .bash_profile
 ```
 
@@ -284,3 +284,9 @@ $ meteor npm run android
 ```
 
 10. If this is the first time using this device for development with this computer, a popup will open on the device, asking you to Allow USB debugging. Click on OK.
+
+# Publish to Apple App Store
+
+1. ```$ meteor npm run buildStage```
+2. ```$ meteor npm run xcode```
+3. Go to toolbar menu ```File > Project Settings > Build System``` and select ```Legacy Build System```

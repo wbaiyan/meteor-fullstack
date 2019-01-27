@@ -29,16 +29,16 @@ useraccounts:flow-routing             # Flow routing for private areas
 alanning:roles                        # Used for securing admin functions
 
 zodiase:material-design-icons-fonts		# Materialize icons to avoid loading in apps
-mozfet:materialize-icons              # Reactive materialize icons with tooltips
 useraccounts:materialize              # Materialize styled user accounts.. can be better...
 
 aldeed:autoform
 aldeed:collection2-core 							# Attach schemas to collections for automatic validation
 aldeed:template-extension
 
-mozfet:meteor-logs@0.3.3
+mozfet:meteor-logs@0.4.0
 mozfet:access@0.0.9
 mozfet:dynaview@0.0.5
 mozfet:materialize-toast@0.0.4
+mozfet:materialize-icons@1.1.4
 mozfet:autoform-materialize@5.0.3
 mozfet:autoform-materialize-modals@4.0.3

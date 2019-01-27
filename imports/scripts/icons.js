@@ -12,8 +12,10 @@ shell.config.fatal = true
 
 // input settings
 const iconSizes = [
+  '16x16',
   '20x20',
   '29x29',
+  '32x32',
   '40x40',
   '48x48',
   '50x50',
@@ -29,6 +31,7 @@ const iconSizes = [
   '114x114',
   '120x120',
   '144x144',
+  '150x150',
   '152x152',
   '167x167',
   '180x180',
@@ -52,7 +55,7 @@ const iconSizes = [
   '1280x720',
   '1280x1920',
   '1536x2048',
-  '1600x960x',
+  '1600x960',
   '1668x2224',
   '1920x1280',
   '2048x1536',
@@ -331,5 +334,23 @@ for (let rectangle of rectangles) {
 
 // remove the temp folder
 shell.rm('-rf', tempFolder)
+
+// copy favicons
+shell.cp(`${iconsFolder}/16x16.png`,
+    `${projectFolder}/public/favicon-16x16.png`)
+shell.cp(`${iconsFolder}/32x32.png`,
+    `${projectFolder}/public/favicon-32x32.png`)
+shell.cp(`${iconsFolder}/48x48.png`,
+    `${projectFolder}/public/favicon.ico`)
+shell.cp(`${iconsFolder}/150x150.png`,
+    `${projectFolder}/public/mstile-150x150.png`)
+shell.cp(`${iconsFolder}/180x180.png`,
+    `${projectFolder}/public/apple-touch-icon.png`)
+shell.cp(`${iconsFolder}/192x192.png`,
+    `${projectFolder}/public/android-chrome-192x192.png`)
+shell.cp(`${iconsFolder}/512x512.png`,
+    `${projectFolder}/public/android-chrome-512x512.png`)
+console.log(chalk.yellow(`Copied favicons.`))
+
 console.log(chalk.black.bgGreen(
     `Completed generating icons. See ${resourcesFolder}`))
