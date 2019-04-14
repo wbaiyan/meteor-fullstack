@@ -5,7 +5,6 @@ import { FlowRouter } from 'meteor/kadira:flow-router'
 import { Log } from 'meteor/mozfet:meteor-logs'
 import 'meteor/mozfet:materialize-icons'
 import './navbar.html'
-import '/imports/ui/components/atNavButton/atNavButton.js'
 Log.log(['debug', 'load'], `Loading module ${module.id}.`)
 
 // on created
@@ -41,9 +40,13 @@ Template.navbar.helpers({
 	activePage() {
     const instance = Template.instance()
 		return instance.state.activePage
-	}
+	},
+  title() {
+    return Meteor.settings.public.title
+  }
 })
 
+// on destroyed
 Template.navbar.onDestroyed(() => {
   const instance = Template.instance()
   instance.state.dropdownInstance.destroy()

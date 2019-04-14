@@ -1,6 +1,7 @@
 // imports
 import { Template } from 'meteor/templating'
 import { Log } from 'meteor/mozfet:meteor-logs'
+import '/imports/ui/components/DynaText'
 import './homePage.html'
 Log.log(['debug', 'load'], `Loading module ${module.id}.`)
 

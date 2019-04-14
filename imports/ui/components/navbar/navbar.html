@@ -13,7 +13,7 @@
       <div>
         <a href="/" id="logo-container" class="brand-logo"
             style="font-size: 1.5em">
-          Fullstack
+          {{title}}
         </a>
       </div>
 
@@ -57,14 +57,18 @@
     {{#if currentUser}}
       <li class="waves-effect">
         <a href="{{pathFor 'account'}}">
-          <i class="material-icons left">settings</i>
+          <i class="material-icons left">person</i>
           <div class="truncate">Settings</div>
         </a>
       </li>
+    {{else}}
+      <li class="waves-effect">
+        <a href="{{pathFor 'account'}}">
+          <i class="material-icons left">person</i>
+          <div class="truncate">Sign In</div>
+        </a>
+      </li>
     {{/if}}
-    <li class="waves-effect">
-      {{> atNavButton}}
-    </li>
   </ul>
 
   <!-- sliding sidebar navigation -->
@@ -74,9 +78,7 @@
     {{> navbarItemSettings activePage=activePage}}
     {{> navbarItemTerms activePage=activePage}}
     {{> navbarItemContact activePage=activePage}}
-    <li>
-      {{> atNavButton}}
-    </li>
+    {{> navbarItemAccount activePage=activePage}}
   </ul>
 </template>
 
@@ -137,5 +139,23 @@
         <i class="material-icons">call</i>&nbsp;&nbsp;&nbsp;&nbsp;Contact Us
       </div>
     </a>
+  {{/navbarItem}}
+</template>
+
+<template name="navbarItemAccount">
+  {{#navbarItem pageName="contact" activePage=activePage}}
+    {{#if currentUser}}
+      <a href="{{pathFor 'account'}}">
+        <div class="valign-wrapper">
+          <i class="material-icons">call</i>&nbsp;&nbsp;&nbsp;&nbsp;Settings
+        </div>
+      </a>
+    {{else}}
+      <a href="{{pathFor 'account'}}">
+        <div class="valign-wrapper">
+          <i class="material-icons">call</i>&nbsp;&nbsp;&nbsp;&nbsp;Sign In
+        </div>
+      </a>
+    {{/if}}
   {{/navbarItem}}
 </template>

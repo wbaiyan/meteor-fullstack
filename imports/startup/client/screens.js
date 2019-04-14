@@ -1,6 +1,7 @@
 import {Session} from 'meteor/session'
 import { _ } from 'meteor/underscore'
 import { Log } from 'meteor/mozfet:meteor-logs'
+Log.log(['debug', 'load'], `Loading module ${module.id}.`)
 
 const onWindowResize = function() {
   const instance = Template.instance()
@@ -11,7 +12,7 @@ const onWindowResize = function() {
   }
   else if (width <= 992) {
     size = 'MEDIUM'
-  }  
+  }
   Log.log(['debug', 'screens'], `Screen side is ${size}.`)
   Session.set('screenSize', size)
 }

@@ -1,0 +1,62 @@
+<template name="signInPage">
+  <div class="row">
+    <h1 class="header">{{__ 'GWT.account.signIn.header'}}</h1>
+    {{#if currentUser}}
+
+      <!-- already signed in -->
+      <p>{{__ 'GWT.account.signIn.alreadySignedIn'}}</p>
+      <button class="btn js-sign-out-button">
+        {{__ 'GWT.account.signOut.label'}}
+      </button>
+
+    {{else}}
+
+      <!-- social account sign in -->
+      <div class="col s12 m6 push-m6 push-l6">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-title">{{__ 'GWT.account.thirdParty.header'}}</div>
+            <div class="row">
+              {{> signInThirdParty}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- email password account sign in-->
+      <div class="col s12 m6 pull-m6 pull-l6">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-title">{{__ 'GWT.account.regular.header'}}</div>
+            <div class="row">
+              {{> signInFormEmailPassword}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {{/if}}
+
+
+    <!-- {{#autoForm id="signInForm" schema=schema type="normal"
+        resetOnSuccess=false}}
+      <div class="col s12 m6">
+        {{> afQuickField name="email"}}
+      </div>
+      <div class="col s12 m6">
+        {{> afQuickField name="password"}}
+      </div>
+      <div class="col s12">
+        <a href="{{pathFor 'signUp'}}" class="">
+          {{__ 'GWT.account.signUp.label'}}</a>&nbsp;&nbsp;&nbsp;
+        <a href="{{pathFor 'passwordForgot'}}" class="">
+          {{__ 'GWT.account.passwordForgot.label'}}
+        </a>
+        <br><br>
+        <button type="submit" class="btn waves-effect">
+          {{__ 'GWT.account.signIn.label'}}
+        </button>
+      </div>
+    {{/autoForm}} -->
+  </div>
+</template>

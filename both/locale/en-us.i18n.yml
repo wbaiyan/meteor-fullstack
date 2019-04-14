@@ -1,0 +1,6 @@
+_locale: 'en-US'
+_splitKey: '.'
+_namespace: "GYR"
+
+title: Fullstack
+home.header: Home

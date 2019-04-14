@@ -1,0 +1,40 @@
+<template name="signUpPage">
+  <div class="row">
+    <h1>{{__ 'GWT.account.signUp.header'}}</h1>
+    {{#autoForm id="signUpForm" schema=schema resetOnSuccess=false}}
+      <div class="col s12">
+        {{> afQuickField name="email"}}
+      </div>
+      <div class="col s6">
+        {{> afQuickField name="password"}}
+      </div>
+      <div class="col s6">
+        {{> afQuickField name="password-confirmation"}}
+      </div>
+      <div class="col s6">
+        {{> afQuickField name="firstName"}}
+      </div>
+      <div class="col s6">
+        {{> afQuickField name="lastName"}}
+      </div>
+      <div class="col s6">
+        {{> afQuickField name="phone"}}
+      </div>
+      <div class="col s12">
+        {{> afQuickField name="newsletter"}}
+      </div>
+      <div class="col s12">
+        <a href="{{pathFor 'signIn'}}" class="">
+          {{__ 'GWT.account.signIn.label'}}
+        </a>&nbsp;&nbsp;&nbsp;
+        <a href="{{pathFor 'passwordForgot'}}" class="">
+          {{__ 'GWT.account.passwordForgot.label'}}
+        </a>
+        <br><br>
+        <button type="submit" class="btn waves-effect">
+          {{__ 'GWT.account.signUp.label'}}
+        </button>
+      </div>
+    {{/autoForm}}
+  </div>
+</template>

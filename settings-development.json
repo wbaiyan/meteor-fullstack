@@ -1,6 +1,19 @@
 {
   "public": {
+    "version": "0.0.1",
+    "environment:": "DEVELOPMENT",
     "isProduction": false,
-    "muteDebugLogging": false
+    "muteDebugLogging": false,
+    "host": {
+      "rootUrl": "http://localhost:3000",
+      "cdnUrl": "https://d213ily3zhgur4.cloudfront.net"
+    }
+  },
+  "facebook": {
+    "appId": "306107110046137",
+    "secret": "477da61b85fe26332e8589e1c4c111bf"
+  },
+  "access": {
+    "updateAllUserProfilesOnStartup": false
   }
 }

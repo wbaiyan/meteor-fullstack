@@ -1,0 +1,29 @@
+<template name="accountPage">
+  <div class="row">
+    {{>DynaText tag="h1" class="header" text=(__ "GWT.account.update.header")}}
+    {{>DynaText tag="p" class="" text=(__ "GWT.account.update.content")}}
+
+    {{#if instance.subscriptionsReady}}
+      {{#autoForm id="updateAccount" schema=schema doc=doc type='normal'}}
+        <div class="col s12 m6">
+          {{> afQuickField name="email"}}
+        </div>
+        <div class="col s12 m6">
+          {{> afQuickField name="username"}}
+        </div>
+        <div class="col s6 m6">
+          {{> afQuickField name="firstname"}}
+        </div>
+        <div class="col s6 m6">
+          {{> afQuickField name="lastname"}}
+        </div>
+        <div class="col s12">
+          <button type="submit" class="btn waves-effect">
+            {{__ 'GWT.account.button.update'}}</button>
+        </div>
+      {{/autoForm}}
+    {{else}}
+      <div class="loading">{{>spinner}}</div>
+    {{/if}}
+  </div>
+</template>

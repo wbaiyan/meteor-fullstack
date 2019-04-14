@@ -5,18 +5,22 @@
 # but you can also edit it by hand.
 
 meteor-base@1.4.0                     # Shared foundation for all Meteor packages
-standard-minifier-css@1.5.2           # CSS minifier run for production mode
-standard-minifier-js@2.4.0            # JS minifier run for production mode
+standard-minifier-css@1.5.3           # CSS minifier run for production mode
+standard-minifier-js@2.4.1            # JS minifier run for production mode
 es5-shim@4.8.0                        # ECMAScript 5 compatibility for older browsers
-ecmascript@0.12.0              		    # Enable ECMAScript2015+ syntax in app code
+ecmascript@0.12.4              		    # Enable ECMAScript2015+ syntax in app code
 
-mongo@1.6.0														# The most popular no-sql object orientated database
+mongo@1.6.2														# The most popular no-sql object orientated database
 allow-deny@1.1.0                      # Allow or deny client access to documents
 email@1.2.3                           # For sending email
 mobile-experience@1.0.5       				# Packages for a great mobile UX
 tracker@1.2.0                 				# Meteor's client-side reactive programming library
-dynamic-import@0.5.0                  # Conditional lazy importing
+dynamic-import@0.5.1                  # Conditional lazy importing
 blaze-html-templates@1.1.2            # Compile .html files into Meteor Blaze views
+
+shell-server
+
+underscore
 
 fourseven:scss@4.5.4                  # SASS for stylesheets
 
@@ -24,21 +28,27 @@ kadira:blaze-layout     							# Layout manager for blaze (works well with FlowR
 
 matb33:collection-hooks						    # MongoDB collection hooks
 kadira:flow-router      							# FlowRouter is a client router for Meteor
-accounts-password@1.5.0								# Accounts are used to keep customer data save
+
+universe:i18n
+universe:i18n-blaze
+
+accounts-password@1.5.1								# Accounts are used to keep customer data save
 useraccounts:flow-routing             # Flow routing for private areas
 alanning:roles                        # Used for securing admin functions
+service-configuration@1.0.11
+accounts-facebook@1.3.2
+facebook-config-ui
 
 zodiase:material-design-icons-fonts		# Materialize icons to avoid loading in apps
-useraccounts:materialize              # Materialize styled user accounts.. can be better...
 
 aldeed:autoform
 aldeed:collection2-core 							# Attach schemas to collections for automatic validation
 aldeed:template-extension
 
 mozfet:meteor-logs@0.4.0
-mozfet:access@0.0.9
-mozfet:dynaview@0.0.5
+mozfet:access@0.0.10
+mozfet:dynaview@0.0.6
 mozfet:materialize-toast@0.0.4
-mozfet:materialize-icons@1.1.4
-mozfet:autoform-materialize@5.0.3
+mozfet:materialize-icons@1.1.5
+mozfet:autoform-materialize@5.0.4
 mozfet:autoform-materialize-modals@4.0.3
