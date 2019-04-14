@@ -41,9 +41,6 @@ Template.navbar.helpers({
     const instance = Template.instance()
 		return instance.state.activePage
 	},
-  title() {
-    return Meteor.settings.public.title
-  }
 })
 
 // on destroyed

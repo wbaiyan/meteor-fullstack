@@ -24,6 +24,7 @@
   "dependencies": {
     "@babel/runtime": "^7.1.5",
     "bcrypt": "^3.0.2",
+    "chalk": "^2.4.1",
     "materialize-css": "^1.0.0",
     "meteor-node-stubs": "^0.4.1",
     "moment": "^2.22.2",
@@ -32,16 +33,11 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
-    "shelljs": "^0.7.8",
-    "chalk": "^2.4.1",
+    "chai": "^4.2.0",
+    "chromedriver": "^2.45.0",
     "faker": "^4.1.0",
-    "icon-splash-resize": "^1.0.6"
-  },
-  "meteor": {
-    "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+    "icon-splash-resize": "^1.0.6",
+    "selenium-webdriver": "^3.0.0-beta-2",
+    "shelljs": "^0.7.8"
   }
 }

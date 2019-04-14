@@ -3,4 +3,64 @@ _splitKey: '.'
 _namespace: "GYR"
 
 title: Fullstack
+
+navigation.home: Home
+navigation.bookings: Bookings
+navigation.contact: Contact Us
+navigation.terms: Terms of Use
+
+footer.services.header: Fullstack
+footer.services.content: Meteor Fullstack is a Cross Platform Meteor Application template with a Material Design style and handy scripts for quickly creating, building, testing and deploying production ready solutions.
+footer.links.header: Links
+footer.copyright: "&copy; 2019 - MIT Licenced."
+
 home.header: Home
+home.intro1: You are home.
+
+contact.header: Contact Us
+contact.content1: We love hearing from you.
+contact.content2: "You can contact us by <a href='mailto:info@expertbox.com'>sending an email</a>."
+
+bookings.header: Bookings
+
+payment.header: Payment
+
+account.regular.header: Regular Account
+account.thirdParty.header: Third Party Login
+account.guest.header: Guest Account
+account.signUp.header: Account Registration
+account.signUp.label: Register
+account.signIn.header: Account Sign In
+account.signIn.label: Sign In
+account.signIn.success: Signin successful
+account.signIn.failure: Error signing in
+account.signIn.alreadySignedIn: You are already signed in.
+account.signOut.label: Sign Out
+account.signOut.success: Signout successful
+account.signOut.failure: Error signing out
+account.passwordForgot.header: Password Reset
+account.passwordForgot.label: Forgot Password?
+account.passwordForgot.success: Check your email
+account.passwordForgot.failure: Do we know you?
+account.passwordReset.label: Reset Password
+account.passwordReset.success: Password change successful
+account.passwordReset.failure: Error changing password
+account.verifyEmail.header: Verify Email
+account.verifyEmail.success: Email verification was successful
+account.verifyEmail.failure: Email verification has failed
+account.overview.header: Your Account
+account.form.email.label: Email
+account.form.email.placeholder: Email address for invoicing
+account.form.phone.label: Phone Number
+account.form.phone.placeholder: Mobile number during tour
+account.form.password.label: Password
+account.form.password.placeholder: A secret to identify you
+account.form.passwordConfirmation.label: Password Confirmation
+account.form.passwordConfirmation.placeholder: Same secret Again
+account.form.firstName.label: First Name
+account.form.firstName.placeholder: Your first given name
+account.form.lastName.label: Last Name
+account.form.lastName.placeholder: Your family name or surname
+account.form.language.label: Language
+account.form.language.placeholder: Your preferred language
+account.form.newsletter.label: Subscribe to our monthly newsletter
